@@ -4,9 +4,9 @@ $(document).ready(function () {
         url: "https://wind-bow.glitch.me/twitch-api/streams/freecodecamp",
         success: function (data1) {
             if (data1.stream === null) {
-                $("#fccStatus").html("Free Code Camp is currently OFFLINE");
+                $("#fccStatus").html("freeCodeCamp is currently OFFLINE");
             } else {
-                $("#fccStatus").html("Free Code Camp is currently LIVE");
+                $("#fccStatus").html("freeCodeCamp is currently LIVE");
             }
         }
     });
@@ -20,16 +20,15 @@ $(document).ready(function () {
         success: function (data2) {
             for (var i = 0; i < data2.follows.length; i++) {
                 console.log(data2.follows[0]);
-                //gets displayName
                 var displayName = data2.follows[i].channel.display_name;
                 var logo = data2.follows[i].channel.logo;
                 var status = data2.follows[i].channel.status;
                 if (logo == null) {
                     logo = "./img/not-found-transparent.png";
                 }
-                $("#followerInfo").prepend("<div class ='row'>" + "<div class='col-md-4'>" +
+                $("#followerInfo").prepend("<div class ='row'>" + "<div class='col-md'>" +
                     "<a href='https://www.twitch.tv/" + displayName + "'><img src='" + logo + "'></a>" +
-                    "</div>" + "<div class='col-md-4'>" + displayName + "</div>" + "<div class='col-md-4'>" + status + "</div></div>");
+                    "</div>" + "<div class='col-md boldMe'>" + displayName + "</div>" + "<div class='col-md'>" + status + "</div></div>");
             }
         }
     });
@@ -46,9 +45,9 @@ $(document).ready(function () {
                 var logo = "./img/not-found-transparent.png";
                 var displayName = data3.statusText;
                 var status = data3.status;
-                $("#followerInfo").prepend("<div class ='row'>" + "<div class='col-md-4'>" +
+                $("#followerInfo").prepend("<div class ='row'>" + "<div class='col-md'>" +
                     "<a  href='https://www.twitch.tv/" + displayName + +"'><img src='" + logo + "'></a>" +
-                    "</div>" + "<div class='col-md-4'>" + displayName + "</div>" + "<div class='col-md-4'>" + status + "</div></div>");
+                    "</div>" + "<div class='col-md boldMe'>" + displayName + "</div>" + "<div class='col-md'>" + status + "</div></div>");
             }
         });
     }

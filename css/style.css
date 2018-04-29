@@ -1,3 +1,25 @@
+body {
+    background-image: url('../img/pexels-bg.jpeg');
+    background-size: cover;
+}
+
+img {
+    width: 50%;
+    border-radius: 25%;
+    margin: 1rem;
+}
+
+.row {
+    border-bottom: solid;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
 #topBox {
     margin: 5%;
+    background: rgba(0,0,0,0.15);
+    border-radius: 25px;
+}
+
+.boldMe {
+    font-weight: 400;
 }
