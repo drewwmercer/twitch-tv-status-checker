@@ -16,34 +16,34 @@
 
 <body>
 
-    <div class="container">
-        <div id="topBox" class="text-center">
-            <h1>twitch.tv Status Checker</h1>
+    <div class="container-fluid">
+        <div id="topBox" class="jumbotron text-center">
+            <img src="./img/twitch-tv.png" id="logo" />
             <a href="https://www.twitch.tv/freecodecamp" target="_blank">
                 <h4 id="fccStatus"></h4>
             </a>
         </div>
 
-        <div class="row">
+        <div class="row text-center">
 
-            <div class="col-md">
-                <h2>Logo: </h2>
-            </div>
-            <div class="col-md">
-                <h2>Display Name: </h2>
-            </div>
-            <div class="col-md">
-                <h2>Status:</h2>
+            <div id="statusPane">
+
             </div>
 
         </div>
-
-        <div id="followerInfo">
-
+        <div class="row text-center">
+            <div class="col-md">
+                <p>
+                    Logo
+                    <br> Channel Name
+                    <br> Current Status
+                </p>
+            </div>
         </div>
 
     </div>
 
+    </div>
 
     <!-- Linking to jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
