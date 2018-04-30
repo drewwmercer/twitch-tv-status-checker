@@ -6,20 +6,50 @@ body {
 img {
     width: 50%;
     border-radius: 25%;
-    margin: 1rem;
+    margin: .5rem;
+}
+
+#logo {
+    border-radius: 0%;
+    margin: 0px;
+    width: 30%;
 }
 
 .row {
-    border-bottom: solid;
+    border-top: solid;
     border-color: rgba(0, 0, 0, 0.15);
 }
 
 #topBox {
-    margin: 5%;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0);
     border-radius: 25px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 0px;
 }
 
-.boldMe {
-    font-weight: 400;
+#statusPane {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#statusPane>a {
+    max-width: 40%;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#online {
+    color: #008000;
+}
+
+#offline {
+    color: #ff4500;
 }
